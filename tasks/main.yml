@@ -1,0 +1,23 @@
+---
+# tasks file for vzell.dotfiles
+
+- name: Synchronization of src ~/.config on the control machine to dest ~/.config on the remote hosts
+  synchronize:
+    src: files/.config
+    dest: "{{ item }}"
+  loop:
+    - /root
+    - /home/vagrant
+  tags: dotconfigfiles
+
+- name: Fix permissions and ownership of ~/.config on the remote host
+  file:
+    dest: "{{ item.dir }}"
+    owner: "{{ item.user }}"
+    group: "{{ item.user }}"
+    mode: "u=rwX,g=rX,o=rX"
+    recurse: yes
+  loop:
+    - { dir: "/root", user: "root" } 
+    - { dir: "/home/vagrant", user: "vagrant" } 
+  tags: dotconfigfiles
