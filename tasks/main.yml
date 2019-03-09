@@ -23,6 +23,6 @@
     mode: "u=rwX,g=rX,o=rX"
     recurse: yes
   loop:
-    - { dir: "/root", user: "root" } 
-    - { dir: "/home/vagrant", user: "vagrant" } 
+    - { dir: "/root/.config", user: "root" }
+    - { dir: "/home/vagrant/.config", user: "vagrant" }
   tags: dotconfigfiles
