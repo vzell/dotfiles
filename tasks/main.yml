@@ -1,6 +1,11 @@
 ---
 # tasks file for vzell.dotfiles
 
+- name: install rsync needed for synchronize
+  package:
+    name: rsync
+    state: present
+
 - name: Synchronization of src ~/.config on the control machine to dest ~/.config on the remote hosts
   synchronize:
     src: files/.config
