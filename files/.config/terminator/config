@@ -2,6 +2,7 @@
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = mouse
 [keybindings]
+  help = <Shift>F1
 [layouts]
   [[default]]
     [[[child0]]]
