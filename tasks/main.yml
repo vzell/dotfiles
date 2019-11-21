@@ -1,7 +1,7 @@
 ---
 # tasks file for vzell.dotfiles
 
-- name: install rsync needed for synchronize
+- name: Install rsync needed for synchronize
   package:
     name: rsync
     state: present
