@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Files which belong to~/.config
+Files which belong to ~/.config
 
 Requirements
 ------------
