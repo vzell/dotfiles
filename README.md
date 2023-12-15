@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Files which belong to~/.config
 
 Requirements
 ------------
